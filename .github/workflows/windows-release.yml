@@ -33,9 +33,9 @@ jobs:
         with:
           name: cleanup-tool-windows
           path: |
-            release/*.exe
-            release/*.blockmap
-            release/*.yml
+            release/CleanupTool-Setup.exe
+            release/CleanupTool-Setup.exe.blockmap
+            release/latest.yml
           if-no-files-found: error
 
       - name: Upload release assets
@@ -43,6 +43,6 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           files: |
-            release/*.exe
-            release/*.blockmap
-            release/*.yml
+            release/CleanupTool-Setup.exe
+            release/CleanupTool-Setup.exe.blockmap
+            release/latest.yml
